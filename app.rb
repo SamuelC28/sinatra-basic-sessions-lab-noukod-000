@@ -6,4 +6,8 @@ configure do
 end
 
 class App < Sinatra::Base
+
+  get '/hey' do 
+  @session = session
+end
 end
