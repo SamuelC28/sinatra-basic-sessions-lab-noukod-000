@@ -9,9 +9,9 @@ class App < Sinatra::Base
 
   configure do
     enable :sessions
-    set :session_secret, "secret"
+    set :session_secret, ENV.fectch('SESSION_SECRET') {SecureRandom.hex(64)}
   end
-  
+
   get '/' do
     @session = session
     erb :index
