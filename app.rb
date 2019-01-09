@@ -7,7 +7,7 @@ end
 
 class App < Sinatra::Base
 
-  get '/hey' do 
-  @session = session
-end
-end
+  get '/' do
+    @session = session
+    erb : index
+  end
