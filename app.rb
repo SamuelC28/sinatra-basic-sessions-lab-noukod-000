@@ -11,3 +11,4 @@ class App < Sinatra::Base
     @session = session
     erb : index
   end
+end 
